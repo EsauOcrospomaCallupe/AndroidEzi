@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "236725587776",
+    "firebase_url": "https://museoar.firebaseio.com",
+    "project_id": "museoar",
+    "storage_bucket": "museoar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236725587776:android:027ace42371eb4f6",
+        "android_client_info": {
+          "package_name": "com.example.esauocrospoma.appar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236725587776-odpm0kap7rk114ddnh47ka6cnvhfu3bj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN36I4P3S-NHzxl_S-EmoM3-Hz3NdnLMs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

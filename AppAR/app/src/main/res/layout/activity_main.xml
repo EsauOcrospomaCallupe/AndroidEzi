@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.esauocrospoma.appar.Activities.MainActivity">
 
-    <com.wikitude.architect.ArchitectView
-        android:id="@+id/architectview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    </com.wikitude.architect.ArchitectView>
+        <FrameLayout
+            android:id="@+id/main_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fl_home_container"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <fragment
+            android:id="@+id/fragment_drawer"
+            android:name="com.example.esauocrospoma.appar.Menu.FragmentDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_drawer"
+            android:layout_gravity="start"/>
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>

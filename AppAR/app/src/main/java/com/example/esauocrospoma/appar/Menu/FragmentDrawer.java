@@ -130,7 +130,6 @@ public class FragmentDrawer extends Fragment {
                 if(getActivity() != null){
                     switch (position){
                         case 0:
-                            Toast.makeText(getActivity(),"GJHDSFJKSAHDF",Toast.LENGTH_SHORT).show();
                             fragment = new FavoriteFragment();
                             changeFragment();
                             break;

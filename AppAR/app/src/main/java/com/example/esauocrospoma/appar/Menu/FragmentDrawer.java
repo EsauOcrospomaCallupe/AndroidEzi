@@ -21,6 +21,8 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.esauocrospoma.appar.Activities.LoginActivity;
+import com.example.esauocrospoma.appar.Activities.MainActivity;
 import com.example.esauocrospoma.appar.Activities.ThreeDActivity;
 import com.example.esauocrospoma.appar.Activities.VideoActivity;
 import com.example.esauocrospoma.appar.Fragments.AccountFragment;
@@ -29,6 +31,7 @@ import com.example.esauocrospoma.appar.Fragments.HomeFragment;
 import com.example.esauocrospoma.appar.Fragments.MapFragment;
 import com.example.esauocrospoma.appar.R;
 import com.example.esauocrospoma.appar.Util.PreferenceManager;
+import com.facebook.login.LoginManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -146,14 +149,10 @@ public class FragmentDrawer extends Fragment {
                             startActivity(e);
                             break;
                         case 4:
-                            fragment = new MapFragment();
-                            changeFragment();
-                            break;
-                        case 5:
                             fragment = new AccountFragment();
                             changeFragment();
                             break;
-                        case 6:
+                        case 5:
                             showDialog();
 
                     }
@@ -172,6 +171,11 @@ public class FragmentDrawer extends Fragment {
     }
 
     private void showDialog() {
+        //LoginManager.getInstance().logOut();
+
+        //Intent i = new Intent(getActivity(),LoginActivity.class);
+        //startActivity(i);
+        getActivity().finish();
        /* final Dialog dialog = new Dialog(getActivity());
 
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);

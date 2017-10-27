@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">AppAR</string>
-
+    <string name="app_name">MARHN</string>
     <!--Facebook-->
-    <string name="facebook_app_id">499950407032981</string>
+    <string name="facebook_app_id">186284718606515</string>
 
     <!--Menu-->
     <string name="drawer_open">Abrir</string>

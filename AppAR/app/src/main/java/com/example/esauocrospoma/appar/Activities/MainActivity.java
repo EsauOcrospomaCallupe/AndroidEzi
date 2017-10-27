@@ -1,5 +1,8 @@
 package com.example.esauocrospoma.appar.Activities;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -8,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.example.esauocrospoma.appar.Fragments.HomeFragment;
 import com.example.esauocrospoma.appar.Menu.FragmentDrawer;
 import com.example.esauocrospoma.appar.R;
 
@@ -27,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         setupNavDrawer();
+
+        Fragment fragment = new HomeFragment();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.main_fragment_container,fragment);
+        fragmentTransaction.commit();
+        mDrawerLayout.closeDrawers();
     }
 
     private void setupNavDrawer() {

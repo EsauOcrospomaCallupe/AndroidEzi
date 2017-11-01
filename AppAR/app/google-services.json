@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "236725587776",
-    "firebase_url": "https://museoar.firebaseio.com",
-    "project_id": "museoar",
-    "storage_bucket": "museoar.appspot.com"
+    "project_number": "540340756923",
+    "firebase_url": "https://eziapp-3ce43.firebaseio.com",
+    "project_id": "eziapp-3ce43",
+    "storage_bucket": "eziapp-3ce43.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:236725587776:android:027ace42371eb4f6",
+        "mobilesdk_app_id": "1:540340756923:android:027ace42371eb4f6",
         "android_client_info": {
           "package_name": "com.example.esauocrospoma.appar"
         }
       },
       "oauth_client": [
         {
-          "client_id": "236725587776-odpm0kap7rk114ddnh47ka6cnvhfu3bj.apps.googleusercontent.com",
+          "client_id": "540340756923-4hgs93rblagdu86t0mgnq4ov5tj4r812.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDN36I4P3S-NHzxl_S-EmoM3-Hz3NdnLMs"
+          "current_key": "AIzaSyBPKW31fKhqhSh8qFxR4cQCSwN6Dm-xSg4"
         }
       ],
       "services": {

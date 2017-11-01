@@ -19,7 +19,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.esauocrospoma.appar.Activities.ThreeDActivity;
 import com.example.esauocrospoma.appar.Activities.VideoActivity;
@@ -27,15 +26,14 @@ import com.example.esauocrospoma.appar.Fragments.AccountFragment;
 import com.example.esauocrospoma.appar.Fragments.FavoriteFragment;
 import com.example.esauocrospoma.appar.Fragments.HomeFragment;
 import com.example.esauocrospoma.appar.Fragments.MapFragment;
+import com.example.esauocrospoma.appar.Managers.PreferenceManager;
 import com.example.esauocrospoma.appar.R;
-import com.example.esauocrospoma.appar.Util.PreferenceManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class FragmentDrawer extends Fragment {
-
 
     TextView tv_nombre;
     RecyclerView drawerList;
@@ -61,7 +59,8 @@ public class FragmentDrawer extends Fragment {
         data.add(new NavDrawerItem("Home",true,true, R.drawable.casita));
         data.add(new NavDrawerItem("Video",true,true,R.drawable.video));
         data.add(new NavDrawerItem("3D",true,true,R.drawable.video_3d));
-        data.add(new NavDrawerItem("Account",true,true,R.drawable.account_circle));
+        data.add(new NavDrawerItem("Mapa",true,true,R.drawable.account_circle));
+        data.add(new NavDrawerItem("Account",true,true,R.drawable.account_off));
         data.add(new NavDrawerItem("Salir",true,true,R.drawable.account_off));
         return data;
     }
@@ -172,7 +171,7 @@ public class FragmentDrawer extends Fragment {
     }
 
     private void showDialog() {
-       /* final Dialog dialog = new Dialog(getActivity());
+       final Dialog dialog = new Dialog(getActivity());
 
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -201,6 +200,6 @@ public class FragmentDrawer extends Fragment {
 
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
-    */
+
     }
 }

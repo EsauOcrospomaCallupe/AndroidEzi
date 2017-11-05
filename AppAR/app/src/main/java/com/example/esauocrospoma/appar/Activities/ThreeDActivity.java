@@ -24,7 +24,6 @@ public class ThreeDActivity extends AppCompatActivity {
         configuration.setLicenseKey(WIKITUDE_SDK_KEY);
 
 
-
         try{
             architectview.onCreate(configuration);
 

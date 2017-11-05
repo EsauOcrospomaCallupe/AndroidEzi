@@ -1,10 +1,6 @@
 package com.example.esauocrospoma.appar.Menu;
 
-
-import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,10 +12,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.esauocrospoma.appar.Activities.SplashActivity;
 import com.example.esauocrospoma.appar.Activities.ThreeDActivity;
 import com.example.esauocrospoma.appar.Activities.VideoActivity;
 import com.example.esauocrospoma.appar.Fragments.AccountFragment;
@@ -154,6 +149,7 @@ public class FragmentDrawer extends Fragment {
                             break;
                         case 6:
                             showDialog();
+                            break;
 
                     }
 
@@ -171,35 +167,39 @@ public class FragmentDrawer extends Fragment {
     }
 
     private void showDialog() {
-       final Dialog dialog = new Dialog(getActivity());
-
-        dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        dialog.setContentView(R.layout.dialog_logout);
-
-        TextView dialog_si = (TextView)dialog.findViewById(R.id.dialog_si);
-        TextView dialog_no = (TextView)dialog.findViewById(R.id.dialog_no);
-
-        dialog_si.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                manager.logOut();
-                startActivity(new Intent(getActivity(), SplashActivity.class));
-                getActivity().finish();
-            }
-        });
-
-        dialog_no.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.show();
-
+        manager.setPrefenceSession("");
+        manager.setPreferenceUsername("");
+        manager.setPreferenceMail("");
+        Intent i = new Intent(getActivity(),SplashActivity.class);
+        getActivity().startActivity(i);
+        getActivity().finish();
+//       final Dialog dialog = new Dialog(getActivity());
+//
+//        dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+//        dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//
+//        dialog.setContentView(R.layout.dialog_logout);
+//
+//        TextView dialog_si = (TextView)dialog.findViewById(R.id.dialog_si);
+//        TextView dialog_no = (TextView)dialog.findViewById(R.id.dialog_no);
+//
+//        dialog_si.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//                startActivity(new Intent(getActivity(), SplashActivity.class));
+//                getActivity().finish();
+//            }
+//        });
+//
+//        dialog_no.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//            }
+//        });
+//
+//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//        dialog.show();
     }
 }

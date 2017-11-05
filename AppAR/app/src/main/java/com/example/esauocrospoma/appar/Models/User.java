@@ -1,4 +1,4 @@
-package com.example.esauocrospoma.appar.Models;
+package com.example.esauocrospoma.appar.models;
 
 import java.io.Serializable;
 

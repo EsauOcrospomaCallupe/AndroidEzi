@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.esauocrospoma.appar.Managers.FirebaseManager;
 import com.example.esauocrospoma.appar.Managers.PreferenceManager;
-import com.example.esauocrospoma.appar.Models.User;
+import com.example.esauocrospoma.appar.models.User;
 import com.example.esauocrospoma.appar.R;
 import com.example.esauocrospoma.appar.Util.FirebaseConstants;
 import com.example.esauocrospoma.appar.Util.Utils;
@@ -73,7 +73,6 @@ public class LoginActivity extends AppCompatActivity {
                             user.setUsername(data_child.child("username").getValue(String.class));
                             user.setApellidos(data_child.child("apellidos").getValue(String.class));
                         }
-                        user.setUsername(data.getKey());
                         users.add(user);
                     }
 

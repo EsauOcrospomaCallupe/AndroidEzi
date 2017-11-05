@@ -9,11 +9,13 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.esauocrospoma.appar.Managers.FirebaseManager;
-import com.example.esauocrospoma.appar.Models.User;
+import com.example.esauocrospoma.appar.Managers.PreferenceManager;
+import com.example.esauocrospoma.appar.models.User;
 import com.example.esauocrospoma.appar.R;
 import com.example.esauocrospoma.appar.Util.FirebaseConstants;
 import com.example.esauocrospoma.appar.Util.Utils;
 import com.google.firebase.database.DatabaseReference;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +31,8 @@ public class RegisterActivity extends AppCompatActivity {
     ImageButton bt_register;
 
     FirebaseManager manager;
+    PreferenceManager p_manager;
+
     User newUser;
     List<String> users = new ArrayList<>();
 
@@ -39,19 +43,21 @@ public class RegisterActivity extends AppCompatActivity {
 
         manager = new FirebaseManager();
 
+        p_manager = PreferenceManager.getInstance(this);
+
         users = Utils.getListOfUsers(manager);
 
         setupViews();
     }
 
     private void setupViews() {
-        et_name = (EditText) findViewById(R.id.et_name);
-        et_last_name = (EditText) findViewById(R.id.et_last_name);
-        et_pass = (EditText) findViewById(R.id.et_pass);
-        et_email = (EditText) findViewById(R.id.et_email);
-        et_user = (EditText) findViewById(R.id.et_user);
-        et_address = (EditText) findViewById(R.id.et_address);
-        bt_register = (ImageButton) findViewById(R.id.bt_register);
+        et_name =  findViewById(R.id.et_name);
+        et_last_name =  findViewById(R.id.et_last_name);
+        et_pass =  findViewById(R.id.et_pass);
+        et_email =  findViewById(R.id.et_email);
+        et_user =  findViewById(R.id.et_user);
+        et_address =  findViewById(R.id.et_address);
+        bt_register =  findViewById(R.id.bt_register);
 
         bt_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +95,13 @@ public class RegisterActivity extends AppCompatActivity {
         newUser.setPassword(pass.getText().toString().trim());
         newUser.setUsername(user.getText().toString().trim());
         newUser.setDireccion(address.getText().toString().trim());
+
+        Gson gson = new Gson();
+        String json = gson.toJson(newUser);
+
+        p_manager.setPrefenceSession(json);
+        p_manager.setPreferenceMail(newUser.getMail());
+        p_manager.setPreferenceUsername(newUser.getUsername());
 
         if(manager.getDatabase().getReference(FirebaseConstants.CHILD_USERS) == null){
             manager.getUsersReference().child(FirebaseConstants.CHILD_USERS).push();

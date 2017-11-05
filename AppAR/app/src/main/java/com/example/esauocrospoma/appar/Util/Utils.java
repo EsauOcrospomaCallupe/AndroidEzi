@@ -23,7 +23,9 @@ public class Utils {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     for (DataSnapshot data : dataSnapshot.getChildren()){
-                        users.add(data.getKey());
+                        for (DataSnapshot data_child : data.getChildren()) {
+                            users.add(data_child.child("username").getValue(String.class));
+                        }
                     }
                 }
 

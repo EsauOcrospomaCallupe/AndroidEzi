@@ -179,11 +179,7 @@ public class AccountFragment extends Fragment {
 
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                    for (DataSnapshot data : dataSnapshot.getChildren()) {
-                        for (DataSnapshot data_child : data.getChildren()) {
-                            if(data_child.child("username").getValue(String.class).equals())
-                        }
-                    }
+
                 }
 
                 @Override

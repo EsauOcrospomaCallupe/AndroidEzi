@@ -30,17 +30,17 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_name"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ESAU OCROSPOMA"/>
+                android:layout_height="wrap_content"/>
             <TextView
+                android:id="@+id/tv_mail"
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="esau@latamready.com"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
 

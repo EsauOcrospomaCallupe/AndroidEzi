@@ -30,7 +30,8 @@ import java.util.List;
 
 public class FragmentDrawer extends Fragment {
 
-    TextView tv_nombre;
+    TextView tv_name;
+    TextView tv_mail;
     RecyclerView drawerList;
 
     private ActionBarDrawerToggle mDrawerToggle;
@@ -69,9 +70,15 @@ public class FragmentDrawer extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_drawer, container, false);
 
-        drawerList = (RecyclerView) view.findViewById(R.id.drawerList);
+        drawerList = view.findViewById(R.id.drawerList);
+        tv_name = view.findViewById(R.id.tv_name);
+        tv_mail = view.findViewById(R.id.tv_mail);
 
         manager = PreferenceManager.getInstance(getActivity());
+
+        tv_name.setText(manager.getPreferenceUsername());
+        tv_mail.setText(manager.getPreferenceMail());
+
         return view;
     }
 

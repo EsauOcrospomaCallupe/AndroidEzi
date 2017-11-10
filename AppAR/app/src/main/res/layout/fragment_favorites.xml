@@ -5,6 +5,7 @@
     android:padding="15dp">
 
     <TextView
+        android:layout_centerHorizontal="true"
         android:id="@+id/tv_fav"
         android:layout_marginTop="10dp"
         android:textSize="20sp"

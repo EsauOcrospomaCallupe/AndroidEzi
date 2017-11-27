@@ -3,10 +3,11 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiente">
+
 
         <ImageView
             android:layout_marginTop="20dp"
@@ -42,7 +43,7 @@
             android:weightSum="2">
 
             <ImageView
-                android:src="@drawable/home"
+                android:src="@drawable/notimain"
                 android:id="@+id/iv_not_1"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -50,7 +51,7 @@
                 android:padding="10dp" />
 
             <ImageView
-                android:src="@drawable/home"
+                android:src="@drawable/facebookmain"
                 android:id="@+id/iv_not_2"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -66,7 +67,7 @@
             android:weightSum="2">
 
             <ImageView
-                android:src="@drawable/home"
+                android:src="@drawable/pdfmain"
                 android:id="@+id/iv_not_3"
                 android:padding="10dp"
                 android:layout_weight="1"
@@ -74,7 +75,7 @@
                 android:layout_height="150dp" />
 
             <ImageView
-                android:src="@drawable/home"
+                android:src="@drawable/yutumain"
                 android:id="@+id/iv_not_4"
                 android:padding="10dp"
                 android:layout_weight="1"

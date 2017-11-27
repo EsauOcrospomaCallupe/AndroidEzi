@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal"
+        android:background="@drawable/gradiente"
         tools:context="com.example.pierolpw10.serviexpress.Activities.RegisterActivity">
 
         <de.hdodenhof.circleimageview.CircleImageView
